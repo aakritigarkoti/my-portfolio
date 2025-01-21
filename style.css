@@ -162,6 +162,27 @@ h2::after {
 </style>
 
 /* Projects Section */
+
+/* Define your animation for the sections */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    transition: opacity 0.5s ease;
+}
+
+/* You can modify this for different animations */
+
  <style>
     /* Projects Section Styling */
     .projects {
@@ -195,6 +216,57 @@ h2::after {
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
     }
 </style>
+
+
+/* Skills Section */
+/* Section styles */
+#skills {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Skill Item */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Label styles */
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px; /* Reduced font size */
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Progress Bar Container */
+.skill-bar {
+    width: 100%;
+    height: 8px; /* Slightly smaller height */
+    background-color: #3a3a3a;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Progress Indicator */
+.skill-progress {
+    height: 100%;
+    border-radius: 50px;
+    position: relative;
+    transition: width 1.5s ease;
+}
+
 /* Contact Section */
 #contact {
     background: #6c63ff; /* Purple */
