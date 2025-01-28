@@ -185,38 +185,148 @@ h2::after {
 
  <style>
     /* Projects Section Styling */
-    .projects {
-        text-align: center;
-    }
+   .project-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-    .project-list {
-        display: flex;
-        justify-content: center;
-        gap: 20px; /* Space between projects */
-        flex-wrap: wrap; /* Wrap projects if screen is too small */
-    }
+.project-item:hover {
+    background-color: #E97451; /* Change to your desired shade of orange */
+    transform: scale(1.20); /* Slight zoom effect */
+}
 
-    .project-item {
-        background-color: #ffffff; /* Default white background */
-        color: #333; /* Default text color */
-        padding: 20px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        cursor: pointer;
-        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    }
+.project-link {
+    text-decoration: none;
+    color: #333;
+}
 
-    /* Hover Animation */
-    .project-item:hover {
-        background-color: #ff9f43; /* Highlighted background color */
-        color: #ffffff; /* Change text to white */
-        transform: translateY(-5px); /* Slight lift */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-    }
-</style>
+.project-link h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
 
+.project-link p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Experience Section */
+#experience {
+    background-color: #f9f9f9;
+    padding: 3rem 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+#experience h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Experience Container */
+.experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: slideInUp 1s ease-out;
+}
+
+/* Experience Card */
+.experience-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: scale(1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.experience-header {
+    background: linear-gradient(90deg, #ff6b6b, #f8e530);
+    padding: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.experience-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.experience-content ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 30px;
+}
+
+.experience-content ul li::before {
+    content: "✨";
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: #ff6b6b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Skills Section */
 /* Section styles */
@@ -266,24 +376,160 @@ h2::after {
     position: relative;
     transition: width 1.5s ease;
 }
-
-/* Contact Section */
+/* Contact Me Section */
 #contact {
-    background: #6c63ff; /* Purple */
-    color: white;
+    background: #f8f9fa; /* Light pastel background */
     padding: 50px 20px;
+    text-align: center;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
 }
 
-#contact a {
-    color: #ff9f43; /* Bright orange */
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-details a {
+    color: #007BFF;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-#contact a:hover {
-    color: white;
+.contact-details a:hover {
+    color: #0056b3;
 }
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.contact-form button {
+    background: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Animation */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.contact-form input:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.contact-form input:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.contact-form textarea {
+    animation-delay: 0.6s;
+}
+
+.contact-form button {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Footer */
 footer {
